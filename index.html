@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — ElBike</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0b0d0f;
+      --surface:   #111417;
+      --border:    #1e2124;
+      --primary:   #c0ff00;
+      --text:      #f0f0f0;
+      --muted:     #8a9099;
+      --radius:    12px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .logo-dot {
+      width: 14px; height: 14px;
+      background: var(--primary);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--primary);
+    }
+    .logo-text {
+      font-size: 22px;
+      font-weight: 900;
+      color: var(--primary);
+      letter-spacing: 1px;
+    }
+    header p {
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* ── Layout ── */
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Section cards ── */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    h2 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--primary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+    }
+    p { margin-bottom: 12px; color: #cdd2d8; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 12px;
+      color: #cdd2d8;
+    }
+    li { margin-bottom: 6px; }
+
+    /* ── Intro card ── */
+    .intro {
+      border-left: 3px solid var(--primary);
+      background: rgba(192, 255, 0, 0.04);
+    }
+    .intro h1 { color: var(--primary); }
+    .effective {
+      display: inline-block;
+      margin-top: 10px;
+      background: rgba(192,255,0,0.10);
+      color: var(--primary);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+    .data-table th {
+      text-align: left;
+      padding: 10px 14px;
+      background: rgba(255,255,255,0.04);
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #cdd2d8;
+      vertical-align: top;
+    }
+    .data-table tr:last-child td { border-bottom: none; }
+    .tag {
+      display: inline-block;
+      background: rgba(192,255,0,0.10);
+      color: var(--primary);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin: 2px 2px 2px 0;
+    }
+    .tag.red   { background: rgba(239,68,68,0.12); color: #f87171; }
+    .tag.blue  { background: rgba(59,130,246,0.12); color: #93c5fd; }
+    .tag.amber { background: rgba(251,191,36,0.12); color: #fbbf24; }
+
+    /* ── Third-party list ── */
+    .service-list { list-style: none; padding: 0; }
+    .service-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .service-list li:last-child { border-bottom: none; }
+    .service-icon {
+      width: 36px; height: 36px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+    .service-name { font-weight: 700; color: var(--text); font-size: 15px; }
+    .service-desc { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+    /* ── Rights grid ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .right-item {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+    .right-item strong { display: block; color: var(--text); margin-bottom: 4px; font-size: 14px; }
+    .right-item span { font-size: 13px; color: var(--muted); }
+
+    /* ── Contact card ── */
+    .contact-box {
+      background: rgba(192,255,0,0.05);
+      border: 1px solid rgba(192,255,0,0.2);
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 8px;
+    }
+    .contact-box a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      color: var(--muted);
+      font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 520px) {
+      section { padding: 22px 18px; }
+      h1 { font-size: 22px; }
+      .rights-grid { grid-template-columns: 1fr 1fr; }
+      .data-table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <span class="logo">
+    <span class="logo-dot"></span>
+    <span class="logo-text">ElBike</span>
+  </span>
+  <p>Privacy Policy</p>
+</header>
+
+<main>
+
+  <!-- Intro -->
+  <section class="intro">
+    <h1>Your privacy matters.</h1>
+    <p>
+      ElBike is a cycling companion app for Gulf region riders. This policy explains exactly what
+      data we collect, why we collect it, and how you can control it.
+      We do not sell your data. We do not share it with advertisers.
+    </p>
+    <span class="effective">Effective date: March 2, 2026</span>
+  </section>
+
+  <!-- 1. Information we collect -->
+  <section>
+    <h2>1. Information We Collect</h2>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Why</th>
+          <th>Stored</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>GPS location</strong><br><span style="font-size:13px;color:#8a9099">While a ride is active</span></td>
+          <td>Track your route, distance, speed, and elevation</td>
+          <td><span class="tag">On device</span></td>
+        </tr>
+        <tr>
+          <td><strong>Email address</strong></td>
+          <td>Account creation and sign-in (optional — app works as guest)</td>
+          <td><span class="tag blue">Supabase</span></td>
+        </tr>
+        <tr>
+          <td><strong>Display name &amp; weight</strong></td>
+          <td>Personalise leaderboards and calorie estimates</td>
+          <td><span class="tag blue">Supabase</span></td>
+        </tr>
+        <tr>
+          <td><strong>Ride sessions</strong><br><span style="font-size:13px;color:#8a9099">Distance, duration, speed, route coordinates</span></td>
+          <td>Show your ride history and analytics</td>
+          <td><span class="tag">On device</span> <span class="tag blue">Supabase (leaderboard)</span></td>
+        </tr>
+        <tr>
+          <td><strong>Track reviews &amp; ratings</strong></td>
+          <td>Community reviews for cycling tracks</td>
+          <td><span class="tag blue">Supabase</span></td>
+        </tr>
+        <tr>
+          <td><strong>Group ride details</strong><br><span style="font-size:13px;color:#8a9099">Title, date, participant list</span></td>
+          <td>Organise community group rides</td>
+          <td><span class="tag blue">Supabase</span></td>
+        </tr>
+        <tr>
+          <td><strong>App settings</strong><br><span style="font-size:13px;color:#8a9099">Theme, language preference</span></td>
+          <td>Remember your preferences between sessions</td>
+          <td><span class="tag">On device</span></td>
+        </tr>
+        <tr>
+          <td><strong>Strava tokens</strong></td>
+          <td>Upload rides to your Strava account (only if you connect)</td>
+          <td><span class="tag amber">Secure device storage</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 2. Location -->
+  <section>
+    <h2>2. Location Data</h2>
+    <p>
+      ElBike requests location permission to track active rides and show nearby cycling tracks.
+      Location is accessed <strong>only while the app is in use</strong> during a ride session.
+      Background location is used solely to continue recording your route if you switch apps
+      mid-ride — it is never used for advertising or tracking outside of rides.
+    </p>
+    <p>
+      GPS coordinates are stored locally on your device. Route data submitted to the
+      leaderboard (speed and distance only — not full GPS traces) is stored on our servers.
+      You can delete your ride history from within the app at any time.
+    </p>
+  </section>
+
+  <!-- 3. Third-party services -->
+  <section>
+    <h2>3. Third-Party Services</h2>
+    <p>ElBike integrates with the following third-party services:</p>
+    <ul class="service-list">
+      <li>
+        <span class="service-icon">🗄️</span>
+        <div>
+          <div class="service-name">Supabase</div>
+          <div class="service-desc">
+            Stores your account, profile, ride leaderboard entries, reviews, and group rides.
+            Data is hosted on servers within the EU.
+            <a href="https://supabase.com/privacy" target="_blank" rel="noopener" style="color:#93c5fd">Privacy policy →</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="service-icon">🌤️</span>
+        <div>
+          <div class="service-name">Open-Meteo</div>
+          <div class="service-desc">
+            Provides weather forecasts. We send only your approximate GPS coordinates
+            (latitude &amp; longitude) to retrieve local weather. No personal data is shared.
+            <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener" style="color:#93c5fd">Terms →</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="service-icon">⛰️</span>
+        <div>
+          <div class="service-name">Open-Elevation</div>
+          <div class="service-desc">
+            Provides elevation data for route profiles. We send GPS coordinates only.
+            No personal data is shared.
+          </div>
+        </div>
+      </li>
+      <li>
+        <span class="service-icon">🚴</span>
+        <div>
+          <div class="service-name">Strava (optional)</div>
+          <div class="service-desc">
+            If you choose to connect your Strava account, we request OAuth permission to
+            upload your rides. We store only the access token (securely on your device).
+            We do not read your full Strava activity history beyond what you explicitly
+            choose to import.
+            <a href="https://www.strava.com/legal/privacy" target="_blank" rel="noopener" style="color:#93c5fd">Privacy policy →</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- 4. How we use your data -->
+  <section>
+    <h2>4. How We Use Your Data</h2>
+    <ul>
+      <li>Provide core app features: ride tracking, weather scores, route maps</li>
+      <li>Show your personal ride history, streaks, and analytics</li>
+      <li>Display community leaderboards and track reviews</li>
+      <li>Send local push notifications for weather reminders (only if you grant permission)</li>
+      <li>Sync rides to Strava (only when you explicitly tap "Upload to Strava")</li>
+    </ul>
+    <p>
+      We do <strong>not</strong> use your data for advertising, profiling, or any purpose
+      beyond operating the app features described above.
+    </p>
+  </section>
+
+  <!-- 5. Data retention -->
+  <section>
+    <h2>5. Data Retention &amp; Deletion</h2>
+    <p>
+      <strong>On-device data</strong> (ride sessions, app settings) is stored indefinitely
+      until you delete individual rides or uninstall the app.
+    </p>
+    <p>
+      <strong>Account data</strong> (profile, reviews, leaderboard entries, group rides)
+      is retained while your account is active. You can delete your account by contacting
+      us at the address below — all associated data will be permanently removed within 30 days.
+    </p>
+    <p>
+      <strong>Strava tokens</strong> are deleted from your device when you disconnect Strava
+      in the app settings.
+    </p>
+  </section>
+
+  <!-- 6. Your rights -->
+  <section>
+    <h2>6. Your Rights</h2>
+    <div class="rights-grid">
+      <div class="right-item">
+        <strong>Access</strong>
+        <span>Request a copy of your personal data</span>
+      </div>
+      <div class="right-item">
+        <strong>Correction</strong>
+        <span>Update your display name or profile at any time in the app</span>
+      </div>
+      <div class="right-item">
+        <strong>Deletion</strong>
+        <span>Delete rides in-app or request full account deletion</span>
+      </div>
+      <div class="right-item">
+        <strong>Portability</strong>
+        <span>Export your ride data via Strava or contact us</span>
+      </div>
+      <div class="right-item">
+        <strong>Opt-out</strong>
+        <span>Use the app as a guest — no account required</span>
+      </div>
+      <div class="right-item">
+        <strong>Notifications</strong>
+        <span>Revoke permission in your device settings at any time</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Children -->
+  <section>
+    <h2>7. Children's Privacy</h2>
+    <p>
+      ElBike is not directed at children under 13. We do not knowingly collect personal
+      information from children under 13. If you believe a child has provided us with
+      personal data, please contact us and we will delete it promptly.
+    </p>
+  </section>
+
+  <!-- 8. Changes -->
+  <section>
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this policy from time to time. When we do, we will update the effective
+      date at the top of this page. Continued use of ElBike after changes constitutes
+      acceptance of the updated policy. For significant changes we will notify users
+      via an in-app message.
+    </p>
+  </section>
+
+  <!-- 9. Contact -->
+  <section>
+    <h2>9. Contact Us</h2>
+    <p>If you have questions about this policy or want to exercise your data rights:</p>
+    <div class="contact-box">
+      <p><strong>ElBike</strong></p>
+      <p>📧 <a href="mailto:privacy@elbike.app">privacy@elbike.app</a></p>
+      <p style="margin-top:10px;font-size:13px;color:#8a9099">
+        We aim to respond to all privacy-related requests within 5 business days.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 ElBike. All rights reserved.</p>
+  <p style="margin-top:6px">This privacy policy applies to the ElBike mobile application (iOS &amp; Android).</p>
+</footer>
+
+</body>
+</html>
